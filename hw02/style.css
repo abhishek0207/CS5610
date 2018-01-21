@@ -1,0 +1,44 @@
+.bottomPara{
+  margin : 0px;
+}
+.bottomParadiv
+{
+  bottom: 0px;
+}
+.content
+{
+  margin-bottom : 400px;
+
+}
+
+.left-col
+{
+  width: 33%;
+  float:left;
+
+}
+.right-col
+{
+ width: 66%;
+  float:left;
+  padding: 2px;
+}
+#Lorem
+{
+  display: none;
+}
+#bottles
+{
+  display: none;
+}
+#lastthing
+{
+  display: none;
+}
+span {
+  margin: 0px;
+  padding:0px;
+}
+h3 {
+  padding: 0px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HomeWork 2 Task 2</title>
+  <link rel="Stylesheet" href="style.css"></link>
+  <script type="text/javascript">
+  function alertPopper(){
+    alert(document.getElementById("sample").innerHTML);
+  }
+
+  function adder(){
+    var id_value = document.getElementById("sample").innerHTML;
+     document.getElementById("sample").innerHTML = parseInt(id_value) + 1;
+  }
+
+  function addPara(){
+    var id_value = document.getElementById("sample").innerHTML;
+    var para = document.getElementById("bottomParadiv");
+    var node = document.createElement("p");
+    var text = document.createTextNode(id_value);
+    node.appendChild(text);
+    para.appendChild(node);
+  }
+
+  </script>
+</head>
+<body>
+  <center>
+    <div class="content" >
+  <h1 id="sample">10</h1>
+  <button id ="alertPopper" onClick ="alertPopper()">Alert!!</Button> <br>
+  <button id ="adder" onClick ="adder()">Add 1</Button><br>
+  <button id="newPara" onClick = "addPara()">Add number below </Button>
+  </div>
+  <div id="bottomParadiv">
+  </div>
+</center>
+
+</body>
+</html>
