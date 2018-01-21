@@ -2,7 +2,11 @@
 <html>
 <head>
   <title>HomeWork 2 Task 1 </title>
+  <meta charset="UTF-8">
     <style>
+    body {
+      text-align: center;
+    }
   .image
   {
     /*float:left;*/
@@ -48,11 +52,17 @@
     padding: 5px;
     text-align: center;
   }
-
+  .powertwo{
+    display: block;
+    margin: auto;
+  }
+  .center-table{
+    margin-left: auto;
+    margin-right: auto;
+  }
   </style>
 </head>
 <body>
-  <center>
     <h3>HomeWork 2</h3>
     <div class="links">
     <a href="https://www.w3schools.com/html/default.asp">Learn HTML </a><br>
@@ -62,23 +72,22 @@
     <div class="wiki">
       <div class="image">
         <!--source : https://en.wikipedia.org/wiki/File:Golden_Retriever_medium-to-light-coat.jpg -->
-        <img src ="dog.jpg" />
+        <img src ="dog.jpg" alt="dog" />
       </div>
      <div class="wikidetails">
-        <p>
           <h3><span class="bluish">D</span><span class="redish">o</span><span class="Orangish">g</span></h3>
-            </p>
     </div>
-    <div class="clear"></div>
-    <div class="powertwo">
+    <div class="powertwo" >
       <h3> Powers of Two</h3>
-      <table>
+      <table class="center-table">
+        <tr>
         <th>
           Power
         </th>
         <th>
           Value
         </th>
+      </tr>
         <tr>
           <td>
             1
@@ -144,12 +153,8 @@
           </td>
         </tr>
       </table>
-
-
-
     </div>
 
     </div>
-
-
-  </center>
+  </body>
+  </html>
