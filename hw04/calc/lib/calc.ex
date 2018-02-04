@@ -50,7 +50,7 @@ end
 #helper function for eval that calls itself recursively in order to
 #evaluate operands and operations present on two stacks
 
-def calculate(expression, operandStack, operatorStack) do
+defp calculate(expression, operandStack, operatorStack) do
   if (expression == nil) do
     if (length(operatorStack)!= 0) do
     {op1, operatorStack} =pop(operatorStack)
@@ -111,7 +111,7 @@ end
 
 #helper function that act as pop operation in a stack
 
-def pop(stack) do
+defp pop(stack) do
     if(length(stack) == 1) do
       [last_in] = stack
       {last_in, []}
@@ -125,13 +125,13 @@ end
 
 #helper function that act as push operation on a stack
 
-def push(stack, item) do
+defp push(stack, item) do
     [item | stack]
   end
 
 #helper function that applies the given operation on given operands
 
-def applyOperation(op, var1, var2) do
+defp applyOperation(op, var1, var2) do
   result = cond do
   (op == "+") ->
     {var1, _} = Float.parse(var1)
@@ -162,7 +162,7 @@ end
 
 #helper function that calculates precedance of operations
 
-def getPrecedance(op1, op2) do
+defp getPrecedance(op1, op2) do
   cond do
      ((op1 == "*" || op1 == "/") && (op2 == "+" || op2 == "-")) ->   {:ok, "no"}
      (op2 == "("  or op2 ==")")  -> {:ok, "no"}
@@ -172,7 +172,7 @@ end
 
 #helper function for evaluating parenthesis
 
-def evalParens(operatorStack, operandStack) do
+defp evalParens(operatorStack, operandStack) do
       {op1, operatorStack} = pop(operatorStack)
       if (op1 == "(") do
         operatorStack = operatorStack -- ["("]
